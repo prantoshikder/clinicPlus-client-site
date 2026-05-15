@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #ffffff;
+  --color-foreground: #031b4e;
+  --color-muted: #5b6b7d;
+  --color-surface: #f5f8fb;
+  --color-border: #e3eaf2;
+
+  --color-brand-50: #eef2fb;
+  --color-brand-100: #d8e0ef;
+  --color-brand-200: #b1c0db;
+  --color-brand-300: #7d92c0;
+  --color-brand-400: #4a64a0;
+  --color-brand-500: #031b4e;
+  --color-brand-600: #082966;
+  --color-brand-700: #021342;
+  --color-brand-800: #010c30;
+  --color-brand-900: #00081e;
+
+  --color-accent-500: #3a52a0;
+  --color-accent-600: #2a3f7e;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-x {
+    padding-inline: 2rem;
+  }
 }
